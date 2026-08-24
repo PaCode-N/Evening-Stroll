@@ -2,7 +2,7 @@ import random
 from operator import truediv
 from random import randint
 
-titulo = "Bienvenido a Evening Stroll!!"
+titulo = "¡Bienvenido a Evening Stroll!"
 print("\n" + titulo + "\n" + "-" * len(titulo))
 enter = input(r"""
          / \__
@@ -14,8 +14,8 @@ enter = input(r"""
 Presiona ENTER para Comenzar:""")
 
 print("""
-Una noche como cualquier otra decides ir a dar una caminata por un bosque oscuro con tu perro, Roco, porque te aburres muchísimo. 
-De repente, escuchas las hojas secas de los árboles crujir detrás de ti. ¡Un hombre encapuchado con un hacha y una pipa aparece de entre los árboles! 
+Una noche como cualquier otra, decides ir a dar una caminata por un bosque oscuro con tu perro, Roco, porque te aburres muchísimo. 
+De repente, escuchas las hojas secas de los árboles crujir detrás de ti. ¡Un hombre encapuchado, con un hacha y una pipa, aparece de entre los árboles! 
 Antes de que puedas reaccionar, el hombre mata a Roco :( y comienza a dirigirse hacia ti... 
       """)
 
@@ -29,16 +29,16 @@ reaccion_mr = input(r"""
 
                 ¯\_(ツ)_/¯
                 
-Tipea a, b o c:
+Teclea a, b o c:
 """)
 
 while reaccion_mr.lower() != "a" and reaccion_mr.lower() != "b" and reaccion_mr.lower() != "c":
-    reaccion_mr = input(" {} No es un caracter valido. Por favor introduce a, b o c: " .format(reaccion_mr))
+    reaccion_mr = input(" {} No es un carácter válido. Por favor, introduce a, b o c: " .format(reaccion_mr))
 
 # Camino de la cueva
 if reaccion_mr.lower() == "a":
     objeto_brillante = input(r"""
-   Encuentras un camino húmedo y oscuro. A lo lejos, ves algo que brilla en el suelo de manera peligrosa.
+   Encuentras un camino húmedo y oscuro. A lo lejos, ves algo que brilla peligrosamente en el suelo.
 
                      ~ ~ ~ ~
                    /         \
@@ -54,13 +54,13 @@ if reaccion_mr.lower() == "a":
 """)
 
     while objeto_brillante.lower() != "a" and objeto_brillante.lower() != "b":
-        objeto_brillante = input(" {} No es un caracter valido. Por favor introduce a o b: ".format(objeto_brillante))
+        objeto_brillante = input(" {} No es un carácter válido. Por favor, introduce a o b: ".format(objeto_brillante))
 
 # Objeto brillante bajo el árbol
     cuchillo = False
     if objeto_brillante.lower() == "a":
         cuchillo = input(r"""
-   Es un cuchillo oxidado cubierto con fósforo, ¿lo quieres recoger? 
+   Es un cuchillo oxidado cubierto de fósforo. ¿Lo quieres recoger? 
 
                      ________
                   _ /  _____ \
@@ -72,13 +72,13 @@ if reaccion_mr.lower() == "a":
    """)
 
         while cuchillo.lower() != "s" and cuchillo.lower() != "n":
-            cuchillo = input(" {} No es un caracter valido. Por favor introduce S o N: ".format(cuchillo))
+            cuchillo = input(" {} No es un carácter válido. Por favor, introduce S o N: ".format(cuchillo))
 
 
 # Agarrar cuchillo
         if cuchillo.lower() == "s":
             print(r"""
-   Felicidades, ¡ahora llevas un cuchillo con muy mala pinta en tu bolsillo!
+   ¡¡¡Felicidades! Ahora llevas un cuchillo con muy mala pinta en tu bolsillo.
 
                         ________
                      _ /  _____ \
@@ -99,7 +99,7 @@ if reaccion_mr.lower() == "a":
 """)
             cuchillo = False
         else:
-            print("Por favor introduce los caracteres admitidos. \n Intentalo nuevamente")
+            print("Por favor, introduce los caracteres admitidos.\nInténtalo nuevamente.")
             exit()
 
     # No observar objeto brillante
@@ -116,7 +116,7 @@ if reaccion_mr.lower() == "a":
         cuchillo = False
 
     else:
-        print("Por favor introduce los caracteres admitidos. \n Intentalo nuevamente")
+        print("Por favor, introduce los caracteres admitidos.\nInténtalo nuevamente.")
         exit()
 
 # Lobo en la salida
@@ -140,13 +140,13 @@ if reaccion_mr.lower() == "a":
    Escribe a o b: 
 """)
     while lobo.lower() != "a" and lobo.lower() != "b":
-        lobo = input(" {} No es un caracter valido. Por favor introduce a o b: ".format(lobo))
+        lobo = input(" {} No es un carácter válido. Por favor, introduce a o b: ".format(lobo))
 
     numero_random_lobo = random.randint(1, 100)
     if lobo.lower() == "a" and cuchillo == True:
         print(r"""
    Si quieres salir con vida, debes matar al lobo. 
-   Para poder hacerlo, debes enterrarle el cuchillo de manera acertada.
+   Para poder hacerlo, debes clavarle el cuchillo de manera acertada.
 
                      ________
                   _ /  _____ \
@@ -154,7 +154,7 @@ if reaccion_mr.lower() == "a":
                   \   X  X   /
                    |________|
 
-   Rápido, tu vida depende de ello, ¿cuánto es 3 * {}?
+   ¡Rápido! Tu vida depende de ello. ¿Cuánto es 3 * {}?
         
 """.format(numero_random_lobo))
 
@@ -163,7 +163,7 @@ if reaccion_mr.lower() == "a":
 
         if multiplicacion_1 == (3 * numero_random_lobo):
             print(r"""
-   ¡Ha estado cerca! Has logrado esquivar al lobo y seguir escapando del hombre con capucha.
+   ¡Has estado cerca! Has logrado esquivar al lobo y seguir escapando del hombre con capucha.
 
                             O
                            /|\\
@@ -173,7 +173,7 @@ if reaccion_mr.lower() == "a":
         else:
             print(r"""
    No has logrado zafarte de las garras del lobo, 
-   pero por lo menos te has convertido en comida de una familia canina :)
+   pero, por lo menos, te has convertido en comida de una familia canina. :)
 
                      ________
                   _ /  _____ \
@@ -212,7 +212,7 @@ if reaccion_mr.lower() == "a":
         else:
             print(r"""
    No has logrado escapar de las garras del lobo, 
-   pero por lo menos te has convertido en comida de una familia canina :)
+   pero, por lo menos, te has convertido en comida de una familia canina. :)
 
                          ________
                       _ /  _____ \
@@ -251,7 +251,7 @@ if reaccion_mr.lower() == "a":
         else:
             print(r"""
    No has logrado escapar de las garras del lobo, 
-   pero por lo menos te has convertido en comida de una familia canina :)
+   pero, por lo menos, te has convertido en comida de una familia canina. :)
 
                      ________
                   _ /  _____ \
@@ -264,7 +264,7 @@ if reaccion_mr.lower() == "a":
 
 # Caracter erróneo
     else:
-        print("Por favor introduce los caracteres admitidos. \n Intentalo nuevamente")
+        print("Por favor, introduce los caracteres admitidos.\nInténtalo nuevamente.")
         exit()
 
 
@@ -281,17 +281,17 @@ if reaccion_mr.lower() == "b":
       (a) ¿Quieres tomar la rama puntiaguda?
       (b) Seguir avanzando sin tomar nada.
 
-   Tipea a o b: 
+   Teclea a o b: 
 """)
 
     while rama_puntiaguda.lower() != "a" and rama_puntiaguda.lower() != "b":
-        rama_puntiaguda = input(" {} No es un caracter valido. Por favor introduce a o b: ".format(rama_puntiaguda))
+        rama_puntiaguda = input(" {} No es un carácter válido. Por favor, introduce a o b: ".format(rama_puntiaguda))
 
 # Agarrar rama
     rama = False
     if rama_puntiaguda.lower() == "a":
         print(r"""
-   Felicidades! Ahora llevas una rama húmeda y puntiaguda en tu bolsillo.
+   ¡¡Felicidades! Ahora llevas una rama húmeda y puntiaguda en tu bolsillo.
 
                          //\\
                         ||  ||
@@ -307,7 +307,7 @@ if reaccion_mr.lower() == "b":
         print("Sigues corriendo sin parar.")
         rama = False
     else:
-        print("Por favor introduce los caracteres admitidos. \n Intentalo nuevamente")
+        print("Por favor, introduce los caracteres admitidos.\nInténtalo nuevamente.")
         exit()
 
 # Obstáculo en el árbol
@@ -323,11 +323,11 @@ if reaccion_mr.lower() == "b":
                     # ## #  # #
                     ###########
           
-   Tipea a o b:
+   Teclea a o b:
 """)
 
     while muro.lower() != "a" and muro.lower() != "b":
-        muro = input(" {} No es un caracter valido. Por favor introduce a o b: ".format(muro))
+        muro = input(" {} No es un carácter válido. Por favor, introduce a o b: ".format(muro))
 
 # User ha elegido tumbar el muro con la rama
     numero_random_muro = randint(1, 100)
@@ -349,7 +349,7 @@ if reaccion_mr.lower() == "b":
 
         if muro_rama == multiplicacion_muro_rama:
             print(r"""
-   ¡OLE! La respuesta era {}, y has logrado seguir escapando.
+   ¡¡OLE! La respuesta era {}, y has logrado seguir escapando.
 
               O
              /|\
@@ -359,7 +359,7 @@ if reaccion_mr.lower() == "b":
 
         else:
             print(r"""
-   Lastimosamente, la respuesta era {}. :(
+   Lamentablemente, la respuesta era {}. :(
    Te has quedado atrapado y descubres que el hombre encapuchado era Dalas. No le ha bastado con destruir a tu perro, así que decide 
    destruir tu reputación publicando en un hilo de X todos tus secretos por tu poca capacidad para multiplicar.
 
@@ -375,7 +375,7 @@ if reaccion_mr.lower() == "b":
 # User quiere tumbar el muro con la rama, pero no tiene rama
     elif muro.lower() == "a" and rama == False:
         muro_mano = int(input("""
-   Aunque anteriormente no agarraste la rama, aun puedes escaparte. Calcula qué piedra debes quitar del muro para derribarlo entero.
+   Aúnque anteriormente no agarraste la rama, aun puedes escaparte. Calcula qué piedra debes quitar del muro para derribarlo entero.
 
       PIENSA RÁPIDO, ¿CUÁNTO ES 2 * {} + 7:
            
@@ -385,7 +385,7 @@ if reaccion_mr.lower() == "b":
 
         if muro_mano == multiplicacion_muro_mano:
             print(r"""
-   ¡OLE! La respuesta era {}, y has logrado seguir escapando.
+   ¡¡OLE! La respuesta era {}, y has logrado seguir escapando.
 
                    O
                   /|\
@@ -395,7 +395,7 @@ if reaccion_mr.lower() == "b":
 
         else:
             print(r"""
-   Lastimosamente, la respuesta era {}. :(
+   Lamentablemente, la respuesta era {}. :(
    Te has quedado atrapado y descubres que el hombre encapuchado era Dalas. No le ha bastado con destruir a tu perro, así que decide 
    destruir tu reputación publicando en un hilo de X todos tus secretos por tu poca capacidad para multiplicar.
 
@@ -411,7 +411,7 @@ if reaccion_mr.lower() == "b":
 # User ha elegido tumbar el muro con las manos
     elif muro.lower() == "b":
         muro_mano = int(input("""
-   Aun te da tiempo a lograrlo, solo debes calcular qué piedra debes quitar del muro para derribarlo entero.
+   Aún te da tiempo de lograrlo; solo debes calcular qué piedra debes quitar del muro para derribarlo entero.
 
       PIENSA RÁPIDO, ¿CUÁNTO ES 2 * {} + 7:
       
@@ -421,7 +421,7 @@ if reaccion_mr.lower() == "b":
 
         if muro_mano == multiplicacion_muro_mano:
             print(r"""
-   ¡OLE! La respuesta era {}, y has logrado seguir escapando.
+   ¡¡OLE! La respuesta era {}, y has logrado seguir escapando.
 
                       O
                      /|\
@@ -431,7 +431,7 @@ if reaccion_mr.lower() == "b":
 
         else:
             print(r"""
-   Lastimosamente, la respuesta era {}. :(
+   Lamentablemente, la respuesta era {}. :(
    Te has quedado atrapado y descubres que el hombre encapuchado era Dalas. No le ha bastado con destruir a tu perro, así que decide 
    destruir tu reputación publicando en un hilo de X todos tus secretos por tu poca capacidad para multiplicar.
 
@@ -451,8 +451,8 @@ numero_random_yuyitsu = randint(1, 50)
 
 if reaccion_mr.lower() == "c" :
    atacar = int(input("""
-   ¡Menudo coraje colega! aunque sea arriesgado, te avalanzas sobre el hombre encapuchado, y con todas tus fuerzas tratas de derribarlo,
-   si resuelves la siguiente operacion aritmetica a lo mejor podrías ganarle: 
+   ¡Menudo coraje, colega! Aúnque sea arriesgado, te abalanzas sobre el hombre encapuchado y, con todas tus fuerzas, tratas de derribarlo.
+   Si resuelves la siguiente operación aritmética, a lo mejor podrías ganarle: 
     
       TU VIDA DEPENDE DE ESTO (4 * {}) / 2 + 5:
       
@@ -462,8 +462,8 @@ if reaccion_mr.lower() == "c" :
 
    if atacar == multiplicacion_ataque :
        print(r"""
-   Espabila tio, como crees que el hombre de capucha ha matado a Roco?
-   A pesar de tus buenas matematicas, tu pecho no esta preparado para soportar navajazos, mueres lentamente desangrado.
+   Espabila, tío. ¿Cómo crees que el hombre de la capucha ha matado a Roco?
+   A pesar de tus buenas matemáticas, tu pecho no está preparado para soportar navajazos. Mueres lentamente desangrado.
           
                                  ___       /|
                                   O       / |      ø
@@ -471,15 +471,15 @@ if reaccion_mr.lower() == "c" :
                                  / \     |==|      / \
                                  | |     \__|
                                     
-   Intentalo de nuevo:)                                    
+   Inténtalo de nuevo :)                                    
 """)
        exit()
 
    else:
        print (r"""
        
-   Te abalanzas sobre el hombre encapuchado, y con todas tus fuerzas tratas de derribarlo, pero lamentablemente eres horroroso en matematcas...
-   Sientes como algo te atraviesa el lado izquierdo del pecho. Te han enterrado una navaja y te mueres lenta y dolorosamente.
+   Te abalanzas sobre el hombre encapuchado y, con todas tus fuerzas, tratas de derribarlo, pero, lamentablemente, eres horroroso en matemáticas...
+   Sientes cómo algo te atraviesa el lado izquierdo del pecho. Te han clavado una navaja y mueres lenta y dolorosamente.
       
       
                                  ___       /|
@@ -489,31 +489,31 @@ if reaccion_mr.lower() == "c" :
                                  | |     \__|
              
              
-   Intentalo de nuevo:)   
+   Inténtalo de nuevo :)   
 """)
        exit()
 
 # Finales
 escondite = input("""
 
-   Por fin logras salir del bosque y lo primero que ves es una tienda de kbabs y un Juan Valdez
+   Por fin logras salir del bosque y lo primero que ves es una tienda de kebabs y un Juan Valdez.
       
       (a) Esconderte con los turcos.
       (b) Esconderte con los cafeteros.
 
- Tipea a o b:
+ Teclea a o b:
  """)
 
 while escondite.lower() != "a" and escondite.lower() != "b":
-    escondite = input(" {} No es un caracter valido. Por favor introduce a o b: ".format(escondite))
+    escondite = input(" {} No es un carácter válido. Por favor, introduce a o b: ".format(escondite))
 
 
 # Arco de los turcos
 
 if escondite.lower() == "a" :
     turquia = input(r"""
-   El hombre con capucha entra al Kbab y se quita la capucha y se lleva las manos a la cabeza. 
-   Se quita lentamente la capucha y descubres que es DALAS!!??!!
+   El hombre con capucha entra al kebab, se quita la capucha y se lleva las manos a la cabeza. 
+   Se quita lentamente la capucha y descubres que es DALAS... ¡¡¿¿Qué??!!
 
                    _______
                  /        \
@@ -522,23 +522,23 @@ if escondite.lower() == "a" :
                 |    ___    |
                  \_________/
              
-   Rapido, esta a punto de atacarte
+   Rápido, está a punto de atacarte.
     
-       (a) Le tiras un kbab
+       (a) Le tiras un kebab
        (b) Le tiras una botella de Fanta
       
-    Tipea a o b:
+    Teclea a o b:
 """)
 
     while turquia.lower() != "a" and turquia.lower() != "b":
-        turquia = input("{} No es un caracter valido. Por favor introduce a o b: ".format(turquia))
+        turquia = input("{} No es un carácter válido. Por favor, introduce a o b: ".format(turquia))
 
     if turquia.lower() == "a" :
         kbab = input(r"""
         
-   Dalas tenia hambre asi que se come el kbab
+   Dalas tenía hambre, así que se come el kebab.
 
-      (a) Le haces una foto y le hundes la reputacion en X por matar a Roco?
+      (a) Le haces una foto y le hundes la reputación en X por matar a Roco?
       (b) Lo atacas sin piedad por haber matado a Roco
       
                                   ________
@@ -549,15 +549,15 @@ if escondite.lower() == "a" :
                                 |  | | |   |
                                  \ ______ /
         
-   Tipea a o b:
+   Teclea a o b:
 """)
 
         while kbab.lower() != "a" and kbab.lower() != "b":
-            kbab = input("{} No es un caracter valido. Por favor introduce a o b: ".format(kbab))
+            kbab = input("{} No es un carácter válido. Por favor, introduce a o b: ".format(kbab))
 
         if kbab.lower() == "a" :
             print("""
-   De puta madre, has destrozado la carrera de dalas Vengando a Roco y has sobrevivido, vamos por un tinto de verano para celebrar!!
+   De puta madre, has destrozado la carrera de Dalas vengando a Roco y has sobrevivido. ¡Vamos por un tinto de verano para celebrar!
    
                                    .     .     .  
                                 . '.   .   . '.  .
@@ -573,8 +573,8 @@ if escondite.lower() == "a" :
 
         elif kbab.lower() == "b" :
             print(r"""
-   Empujas a dalas y su cabeza cae en el bordillo de una mesa, lo que lo mata automaticamente:0. 
-   Has logrado vengar a Roco pero por desgracia has terminado en la carcel en el proceso
+   Empujas a Dalas y su cabeza cae en el bordillo de una mesa, lo que lo mata automáticamente :0. 
+   Has logrado vengar a Roco, pero, por desgracia, has terminado en la cárcel en el proceso.
    
                             | | | | | | | | |
                             | | | | | | | | |
@@ -589,12 +589,12 @@ if escondite.lower() == "a" :
 """)
             exit()
         else:
-            print("Por favor introduce los caracteres admitidos. \n Intentalo nuevamente")
+            print("Por favor, introduce los caracteres admitidos.\nInténtalo nuevamente.")
             exit()
 
     elif turquia.lower() == "b" :
         print(r"""
-   Dalas se enoja por el exceso de azucar que le acabas de lanzar y explota matandose a si mismo, a los turcos y a ti...
+   Dalas se enoja por el exceso de azúcar que le acabas de lanzar y explota, matándose a sí mismo, a los turcos y a ti...
    
                        _______
                       /       \
@@ -606,12 +606,12 @@ if escondite.lower() == "a" :
                           |
                          / \  
         
-   Fin del Juego.
+   Fin del juego.
 """)
         exit()
 
     else:
-        print("Por favor introduce los caracteres admitidos. \n Intentalo nuevamente")
+        print("Por favor, introduce los caracteres admitidos.\nInténtalo nuevamente.")
         exit()
 
 
@@ -620,7 +620,7 @@ if escondite.lower() == "a" :
 elif escondite.lower() == "b" :
     colombia = input(r"""
    El hombre con capucha entra al Juan Valdez y se lleva las manos a la cabeza. 
-   Se quita lentamente la capucha y descubres que es DALAS!!??!!
+   Se quita lentamente la capucha y descubres que es DALAS... ¡¡¿¿Qué??!!
 
                    _______
                  /        \
@@ -629,21 +629,21 @@ elif escondite.lower() == "b" :
                 |    ___    |
                  \_________/
 
-   Rapido, esta a punto de atacarte
+   Rápido, está a punto de atacarte.
    
-      (a) Le tiras un Capuchino
+      (a) Le tiras un capuchino
       (b) Le tiras una mesera
     
-    Tipea a o b:
+    Teclea a o b:
 """)
 
     while colombia.lower() != "a" and colombia.lower() != "b":
-        colombia = input(" {} No es un caracter valido. Por favor introduce a o b: ".format(colombia))
+        colombia = input(" {} No es un carácter válido. Por favor, introduce a o b: ".format(colombia))
 
 
     if colombia.lower() == "a":
         Cpuchino = input(r"""
-   Dalas se enoja porque odia la cafeína y explota destruyendose a si mismo, a los Colombianos y a ti...
+   Dalas se enoja porque odia la cafeína y explota, destruyéndose a sí mismo, a los colombianos y a ti...
    
                                    x   x     x   x     x   x    
                                     \_/       \_/       \_/
@@ -652,26 +652,26 @@ elif escondite.lower() == "b" :
         exit()
     elif colombia.lower() == "b":
         mesera = input(r"""    
-   Dalas se ha distraido compltamente con la mesera
+   Dalas se ha distraído completamente con la mesera.
    
                      O
                     /|\
                     / \
                  ( Mesera )
 
-      (a) Le haces una foto con la mesera y le hundes la reputacion en X por asesino y simp
-      (b) Lo atacas sin piedad mientras esta distraido por haber matado a Roco
+      (a) Le haces una foto con la mesera y le hundes la reputación en X por asesino y simp.
+      (b) Lo atacas sin piedad mientras está distraído por haber matado a Roco.
 
 
-   Tipea a o b:
+   Teclea a o b:
 """)
         while mesera.lower() != "a" and mesera.lower() != "b":
             mesera = input(
-                " {} No es un caracter valido. Por favor introduce a o b: ".format(mesera))
+                " {} No es un carácter válido. Por favor, introduce a o b: ".format(mesera))
 
         if mesera.lower() == "a" :
             print("""
-   De puta madre, has destrozado la carrera de Dalas, todos sus enemigos se han cargado todo lo que amaba.  
+   De puta madre, has destrozado la carrera de Dalas; todos sus enemigos se han cargado todo lo que amaba.  
    
                                    .     .     .  
                                 . '.   .   . '.  .
@@ -686,17 +686,17 @@ elif escondite.lower() == "b" :
 """)# las feministas y los animalistas
         elif mesera.lower()== "b" :
             print("""
-   Lo empujas y dalas tiene mas fuerza de la que creias, te logra tirar al suelo y te clava su navaja en el pecho. Has muerto... 
+   Lo empujas, pero Dalas tiene más fuerza de la que creías. Logra tirarte al suelo y te clava su navaja en el pecho. Has muerto... 
 """)
             #destroza la mandibula
         else:
-            print("Por favor introduce los caracteres admitidos. \n Intentalo nuevamente")
+            print("Por favor, introduce los caracteres admitidos.\nInténtalo nuevamente.")
             exit()
     else:
-        print("Por favor introduce los caracteres admitidos. \n Intentalo nuevamente")
+        print("Por favor, introduce los caracteres admitidos.\nInténtalo nuevamente.")
         exit()
 else:
-    print("Por favor introduce los caracteres admitidos. \n Intentalo nuevamente")
+    print("Por favor, introduce los caracteres admitidos.\nInténtalo nuevamente.")
     exit()
 
 
