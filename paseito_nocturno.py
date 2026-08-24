@@ -642,7 +642,7 @@ elif escondite.lower() == "b" :
 
 
     if colombia.lower() == "a":
-        Cpuchino = input(r"""
+        print(r"""
    Dalas se enoja porque odia la cafeína y explota, destruyéndose a sí mismo, a los colombianos y a ti...
    
                                    x   x     x   x     x   x    
