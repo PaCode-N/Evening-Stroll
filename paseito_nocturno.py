@@ -291,7 +291,7 @@ if reaccion_mr.lower() == "b":
     rama = False
     if rama_puntiaguda.lower() == "a":
         print(r"""
-   ¡¡Felicidades! Ahora llevas una rama húmeda y puntiaguda en tu bolsillo.
+   ¡Felicidades! Ahora llevas una rama húmeda y puntiaguda en tu bolsillo.
 
                          //\\
                         ||  ||
